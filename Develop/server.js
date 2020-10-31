@@ -1,21 +1,26 @@
-var http = require('http');
+var express = require('express');
 var path = require('path');
 const fs = require("fs");
 const util = require('util');
 const uuidv1 = require('uuidv1');
 
+var express   =     require("express");
+var app       =     express();
+
+app.use(express.static('public'));
+
+var PORT = process.env.PORT || 3005;
+
+
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+
 
 const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = util.promisify(fs.writeFile);
 
-
-var express = require('express');
-
-var app = express();
-var PORT = process.env.PORT || 3006;
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static(__dirname + '/public'));
 
 
 function readnotes() {
@@ -62,10 +67,10 @@ app.get("/", function(req, res) {
   });
 
   
-app.get("/notes", function(req, res) {
+//app.get("/notes", function(req, res) {
   
-  res.sendFile(path.join(__dirname, "notes.html"));
-});
+ // res.sendFile(path.join(__dirname, "notes.html"));
+//});
 
 
 app.get("/api/notes", function(req, res){
