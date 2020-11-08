@@ -16,4 +16,4 @@ Using express, it allows users to write notes and save it onto the server, also 
 ![](/assets/sc3.png);
 
 
-## Link to deployed projrct
+## Link to deployed project
