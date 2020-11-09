@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = util.promisify(fs.writeFile);
 
-app.get("/notes", function(req, res) {
+app.get("/", function(req, res) {
 
 res.sendFile(path.join(__dirname, "notes.html"));
 });
