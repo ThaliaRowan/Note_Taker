@@ -10,7 +10,7 @@ var app = express();
 
 app.use(express.static("public"));
 
-var PORT = process.env.PORT || 3005;
+const PORT = process.env.PORT || 3005;
 
 app.use(express.urlencoded({ extended: true }));
 
