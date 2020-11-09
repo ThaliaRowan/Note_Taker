@@ -4,14 +4,19 @@
   "description": "Allows users to post and delete notes",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
     "fs": "0.0.1-security",
+    "serve": "^11.3.2",
     "util": "^0.12.3",
     "uuidv1": "^1.6.14"
   }
