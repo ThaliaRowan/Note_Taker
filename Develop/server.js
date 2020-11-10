@@ -25,7 +25,7 @@ res.sendFile(path.join(__dirname, "public/notes.html"));
 
 app.get("/api/notes", function (req, res) {
  
-  readFileAsync(__dirname + './db/db.json', function(err, data){
+  readFileAsync(__dirname + '/db/db.json', function(err, data){
     if(err){
       throw err;
     } 
@@ -61,7 +61,7 @@ app.delete("/api/notes/:id", function(req, res){
  for(let i =0; i<dbjson.length; i++){
    dbjson[i].id = i;
  }
- writeFileAsync(__dirname + "./db/db.json", JSON.stringify(dbjson), function(err){
+ writeFileAsync(__dirname + "/db/db.json", JSON.stringify(dbjson), function(err){
    if(err){
      throw err;
    }
