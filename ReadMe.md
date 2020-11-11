@@ -17,3 +17,4 @@ Using express, it allows users to write notes and save it onto the server, also 
 
 
 ## Link to deployed project
+https://glacial-chamber-52815.herokuapp.com/
